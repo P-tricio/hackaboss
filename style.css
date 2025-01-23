@@ -1,0 +1,262 @@
+@import url(extras/extras.css);
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: grid;
+    grid-template-rows: 5rem 1fr 4rem;
+    min-height: 100vh;
+}
+
+header {
+    grid-row: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+main {
+    grid-row: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    position: relative;
+}
+
+section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    max-width: 80vh;
+    margin: 0.5rem;
+}
+
+#bateria {
+    width: 100%;
+    display: block;
+    height: auto;
+    object-fit: cover;
+    padding: 1rem;
+}
+
+footer {
+    grid-row: 3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+footer p {
+    margin: 0 10px;
+}
+
+/* BOTONES */
+
+.melody-button,
+.tecla,
+.key-button {
+    position: absolute;
+}
+
+.tecla {
+    z-index: 1;
+}
+
+#teclado {
+    bottom: 0%;
+    align-items: center;
+}
+
+/* BOTONES de sonidos OCULTOS*/
+
+.melody-button {
+    background: transparent;
+    border: none;
+    z-index: 2;
+}
+
+#crash {
+    top: 7%;
+    left: 13%;
+    border-radius: 50%;
+    width: 26%;
+    height: 12%;
+    transform: rotate(15deg);
+}
+
+#close {
+    top: 60%;
+    left: 13%;
+    border-radius: 5%;
+    width: 8%;
+    height: 14%;
+}
+
+#open {
+    top: 29%;
+    left: 8%;
+    border-radius: 50%;
+    width: 18%;
+    height: 8%;
+}
+
+#kick {
+    top: 34%;
+    left: 34%;
+    border-radius: 100%;
+    width: 35%;
+    height: 35%;
+}
+
+#ride {
+    top: 16%;
+    left: 68%;
+    border-radius: 50%;
+    width: 29%;
+    height: 17%;
+    transform: rotate(-45deg);
+}
+
+#snare {
+    top: 38%;
+    left: 20%;
+    border-radius: 5%;
+    width: 16%;
+    height: 8%;
+}
+
+#tom-high {
+    top: 22%;
+    left: 26%;
+    border-radius: 10%;
+    width: 19%;
+    height: 17%;
+}
+
+#tom-low {
+    top: 22%;
+    left: 53%;
+    border-radius: 10%;
+    width: 19%;
+    height: 17%;
+}
+
+#tom-mid {
+    top: 40%;
+    left: 67%;
+    border-radius: 10%;
+    width: 20%;
+    height: 24%;
+}
+
+/* usar TECLADO */
+
+#crashQ {
+    top: 5%;
+    left: 22%;
+}
+
+#closeW {
+    top: 63%;
+    left: 14%;
+}
+
+#openE {
+    top: 25%;
+    left: 8%;
+}
+
+#kickR {
+    top: 47%;
+    left: 48%;
+}
+
+#rideT {
+    top: 17%;
+    left: 79%;
+}
+
+#snareU {
+    top: 40%;
+    left: 21%;
+}
+
+#tom-highI {
+    top: 28%;
+    left: 33%;
+}
+
+#tom-lowO {
+    top: 27%;
+    left: 59%;
+}
+
+#tom-midP {
+    top: 47%;
+    left: 71%;
+}
+
+/* Caja de INICIO */
+
+.instrucciones div {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.instrucciones {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    backdrop-filter: blur(8px);
+    z-index: 9999;
+}
+
+.ocultar {
+    display: none;
+}
+
+.mostrar {
+    display: block;
+}
+
+@media (min-width: 600px) {
+    body {
+        grid-template-rows: 5rem 1fr 3rem;
+        grid-template-columns: 2rem 1fr 2rem;
+    }
+
+    header {
+        grid-column: span 3;
+    }
+
+    main {
+        grid-column: span 3;
+    }
+
+    section {
+        width: 80vh;
+    }
+
+    #teclado {
+        bottom: 10%;
+        align-items: center;
+    }
+
+    footer {
+        grid-column: span 3;
+    }
+}
